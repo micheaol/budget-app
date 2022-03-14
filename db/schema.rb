@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_14_153641) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_14_192022) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "adminpack"
   enable_extension "pgagent"
@@ -28,13 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_14_153641) do
     t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "students", primary_key: "student_id", id: :integer, default: nil, force: :cascade do |t|
-    t.integer "id", null: false
-    t.integer "age"
-    t.string "first_name", limit: 250
-    t.string "last_name", limit: 250
   end
 
   create_table "users", force: :cascade do |t|

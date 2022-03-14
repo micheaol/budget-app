@@ -1,0 +1,7 @@
+<%if user_signed_in?%>
+   <%=current_user.id %>
+<%= button_to "log out", destroy_user_session_path, method: :delete %>
+<%else%>
+   
+   <h1>Please sign in....</h1>
+<%end%>
