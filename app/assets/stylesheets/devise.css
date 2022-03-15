@@ -22,3 +22,7 @@
 .field {
     width: 100%;
 }
+
+.contain-self {
+    text-align: center;
+}
