@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 
-  resources :entities
-  
+  resources :activities
+
   resources :categories
 end

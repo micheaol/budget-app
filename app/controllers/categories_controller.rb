@@ -4,11 +4,14 @@ class CategoriesController < ApplicationController
 
 
     def index
-        @categories = Category.where(user_id: current_user.id)
+        @categories = current_user.categories
+        p '=========='
+        p @categories
+        p '=========='
     end
 
     def show
-        @activities = @category.entities.order(created_at: 'desc')
+        @activities = @category.activities.order(created_at: 'desc')
       end
 
     def new
@@ -27,6 +30,9 @@ class CategoriesController < ApplicationController
        end
     end
 
+    def set_category
+        @category = Category.includes(:activities).find(params[:id])
+      end
 
 
 

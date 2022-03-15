@@ -1,0 +1,30 @@
+.image {
+    width: 60px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer {
+    bottom: 0;
+    width: 80vw;
+    background-color: #5fb523;
+
+  }
+  
+  .buttons {
+    border: 2px solid white;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    list-style-type: none; 
+  }
+
+  .navbar {
+    background-color: #2596be;
+    height: 15vh;
+}

@@ -7,7 +7,7 @@ ruby "3.0.3"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'devise'
-
+gem "font-awesome-rails"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

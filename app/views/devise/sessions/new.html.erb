@@ -1,24 +1,26 @@
 <div class='default-font'>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    <div class='login-header is-flex is-justify-content-space-between is-align-items-center p-2 mb-2'>
-      <%= link_to 'Back', root_path, class: "has-text-black" %>
+    <div class='navbar'>
+      
+        <%= link_to '', root_path, class: "fa fa-arrow-left fa-lg" %>
       <div>
-        <h2 class="title has-text-white">LOGIN</h2>
+        <h2 class="login-title">LOGIN</h2>
       </div>
       <div>
-        <%= f.submit "Log in", class:'form-submit has-text-white is-size-6'%>
+        <%= f.submit "Log in", class:'login-self'%>
       </div>
     </div>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field">
-      <%= f.email_field :email, placeholder: "Email", class: 'input'%>
-      <%= f.password_field :password, placeholder: "Password", class: 'input' %>
-    </div>
-
-    <div class="has-text-centered">
-      <%= link_to "Forgot password?", new_password_path(resource_name), class: "has-text-grey-lighter" %>
+    <div class='container input-group mb-3'>
+          <div class="field">
+              <%= f.email_field :email, placeholder: "Email", class: 'form-control mb-1'%>
+              <%= f.password_field :password, placeholder: "Password", class: 'form-control mb-1' %>
+          </div>
+          <div class="d-flex">
+            <%= link_to "Forgot password?", new_password_path(resource_name), class: "has-text-grey-lighter" %>
+          </div>
     </div>
 
   <% end %>
