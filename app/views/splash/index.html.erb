@@ -1,11 +1,10 @@
+<div class='splash-body default-font'>
+  <h1 class='splash-title'>Snapscan</h1>
 
-
-<%if user_signed_in?%>
-
-    <h1>Welcome to budget app...............</h1>
-<%= button_to "log out", destroy_user_session_path, method: :delete %>
-<%else%>
-<%= link_to "Sign in", new_user_session_path %>
-<%= link_to"Sign up", new_user_registration_path %>
-
-<%end%>
+  <div class='splash-links btn btn-primary btn-lg btn-block'>
+    <%= link_to 'LOGIN', new_user_session_path, class: "button is-info is-active mb-2" %>
+  </div>
+  <div class='splash-links btn btn-primary btn-lg btn-block'>
+    <%= link_to 'SIGN UP', new_user_registration_path, class: "button mb-2"%>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 class EntitiesController < ApplicationController
     # load_and_authorize_resource
     def index
-        redirect_to categories_path
+       redirect_to categories_path
         
     end
 
@@ -13,15 +13,9 @@ class EntitiesController < ApplicationController
         @entity_transaction = Entity.new(activity_params)
         @entity_transaction.author = current_user
         
-        respond_to do |format|
         if @entity_transaction.save!
-            p '==================='
-            p @entity_transaction
-            p '==================='
-            format.html { redirect_to @entity_transaction.categories.first, notice: 'Transaction was successfully created.' }
-        else
-            format.html { render :new, status: :unprocessable_entity }
-          end
+            flash[:notice] = "Transaction created successfully"
+            redirect_to entities_path
         end
     end
 
