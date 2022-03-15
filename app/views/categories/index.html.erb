@@ -1,12 +1,12 @@
 <div class='default-font'>
-  <nav class="navbar self-nav">
+  <nav class="navbar">
     <span></span>
-    <span class="has-text-white is-size-4">CATEGORIES</span><br>
-    <%= button_to "sign out", destroy_user_session_path, class:'form-submit has-text-white is-size-7', method: :delete %>
+    <span class="login-title">CATEGORIES</span><br>
+    <%= button_to "sign out", destroy_user_session_path, class:'login-self', method: :delete %>
   </nav>
             <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
-  <ul>
+  <ul class='container'>
     <% if @categories.empty? %>
       <div>
         No categories for now
@@ -18,7 +18,7 @@
     <% end %>
   </ul>
 
-  <footer class=''>
+  <footer type="button" class="btn btn-lg btn-block add-color-btn">
     <%= link_to 'ADD NEW CATEGORY', new_category_path, class: 'buttons has-text-white has-text-weight-medium' %>
   </footer>
 </div>

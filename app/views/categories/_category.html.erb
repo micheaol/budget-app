@@ -1,16 +1,18 @@
 <div class='default-font'>
   <%= link_to category_url(category) do %>
     <li >
-      <div class='m-3 p-4 card is-flex is-justify-content-space-between'>
-        <div class='image'>
+      <div class='card d-flex flex-row bd-highlight mb-3'>
+        <div class='image p-2 flex-fill bd-highlight'>
           <%= category.icon %>
         </div>
-        <div>
+        <div class='p-2 flex-fill bd-highlight'>
           <h5><%= category.name.capitalize %>
           <br>
           <small><%= category.created_at.strftime('%-d %h %Y')%></small>
         </div>
-        <small class='has-text-weight-semibold'>$<%= category.total_amount %></small>
+          <div class='p-2 flex-fill bd-highlight'>
+            <small class='has-text-weight-semibold'>$<%= category.total_amount %></small>
+          </div>
       </div>
     </li>
   <%  end %>

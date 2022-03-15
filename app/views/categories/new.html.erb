@@ -1,7 +1,22 @@
-<h1>Create new Category</h1>
+<div>
+    <nav class="navbar">
+        <span></span>
+        <span class="login-title">Create new Category</span><br>
+        <%= button_to "sign out", destroy_user_session_path, class:'login-self', method: :delete %>
+    </nav>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-<%= form_with model: @category do |form |%>
-    <%= form.text_field :name%>
-    <%= form.text_field :icon%>
-    <%= form.submit%>
-<%end%>
+    <div class='container input-group mb-3 contain-self'>
+        <%= form_with model: @category do |form |%>
+        <div class='field'>
+            <%= form.text_field :name,  placeholder: "Name", class: 'form-control mb-1'%>
+            <%= form.text_field :icon, placeholder: "Icon", class: 'form-control mb-1'%>
+        </div>
+        <footer type="button" class="btn btn-block add-color-btn">
+            <%= form.submit 'Create New Category',class: 'btn-caty'%>
+        </footer>
+    <%end%>
+    </div>
+</div>
+

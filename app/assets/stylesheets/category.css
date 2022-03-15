@@ -1,6 +1,5 @@
 .image {
     width: 60px;
-    height: 50px;
     border: 1px solid black;
     text-align: center;
     padding: 10px;
@@ -14,17 +13,46 @@
   }
   
   .buttons {
-    border: 2px solid white;
-    padding: 1rem;
+    border: 1px solid white;
+    padding: 0.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    color:white !important;
   }
 
   ul {
-    list-style-type: none; 
+    list-style-type: none;
+    align-items: center;
+  }
+
+  .card {
+    background-color: rgb(247, 500, 241) !important;
   }
 
   .navbar {
     background-color: #2596be;
     height: 15vh;
+}
+
+.add-color-btn{
+  background-color: #5fb523;
+  padding: 1rem;
+  border-radius: 0%;
+  
+}
+
+.input-group {
+  display: block !important;
+}
+
+.btn-caty {
+  background-color: #5fb523;
+  border: 1px solid rgb(211, 208, 208);
+  padding: 0.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  color:white;
 }
