@@ -1,24 +1,54 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/Ruby-red)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Budget App
 
-Things you may want to cover:
+>
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby On Rails
 
-* Configuration
+## To get a local copy up and running follow these simple example steps.
 
-* Database creation
+Open your termnial and run the following command:
 
-* Database initialization
+<code>git clone https://github.com/micheaol/budget-app.git</code>
+ - cd budget-app
+ - bundle
+ - rails db:create
+ - rails db: migrate
+ - <code>rails s</code> <br>
 
-* How to run the test suite
+ Open your browser and type the following URL <code>http://127.0.0.1:3000/</code>
 
-* Services (job queues, cache servers, search engines, etc.)
+Finally you can start using the app and add some Category, and Activities.
+Enjoy!
 
-* Deployment instructions
 
-* ...
+### Prerequisites
+
+- Ruby
+- Terminal
+
+## Author
+
+👤 **Michael Oladele**
+
+- GitHub: [@micheaol](https://github.com/micheaol)
+- Twitter: [@micheaol](https://twitter.com/micheaol)
+- LinkedIn: [@micheaol](https://www.linkedin.com/in/micheaol/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
