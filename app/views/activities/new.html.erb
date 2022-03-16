@@ -1,8 +1,21 @@
-<h1>NEW Transaction </h1>
+<div>
+        <nav class="navbar">
+        <span></span>
+        <span class="login-title">Create new Transaction</span><br>
+        <%= button_to "sign out", destroy_user_session_path, class:'login-self', method: :delete %>
+    </nav>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-<%= form_with model: @entity_transaction do | form|%>
-    <%= form.text_field :name%>
-    <%= form.text_field :amount%>
-    <%= form.collection_select :category_ids, current_user.categories.order(:name), :id, :name, {}, { class: "input", multiple: true } %>
+<div class='container input-group mb-3 contain-self'>
+<%= form_with(model: @activity) do | form|%>
+    <%= form.text_field :name, placeholder: "Name", class: 'form-control mb-1'%>
+    <%= form.text_field :amount, placeholder: "Amount", class: 'form-control mb-1'%>
+
+        <%= form.collection_select :category_ids, current_user.categories.order(:name), :id, :name, {}, { class: "input", multiple: true } %>
+    </button>
+    </div>
     <%= form.submit %>
 <%end%>
+</div>
+</div>

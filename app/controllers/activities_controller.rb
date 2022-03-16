@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
-    # load_and_authorize_resource
+    load_and_authorize_resource
+    
     def index
        redirect_to categories_path
         
@@ -15,10 +16,11 @@ class ActivitiesController < ApplicationController
         
         if @entity_transaction.save!
             flash[:notice] = "Transaction created successfully"
-            redirect_to entities_path
+            redirect_to categories_path
         end
     end
 
+    private
 
     def activity_params
         params.require(:entity).permit(:name, :amount, category_ids: [])

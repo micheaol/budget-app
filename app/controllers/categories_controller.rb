@@ -1,13 +1,11 @@
 class CategoriesController < ApplicationController
-    # load_and_authorize_resource
+    load_and_authorize_resource
+
     before_action :set_category, only: %i[show]
 
 
     def index
         @categories = current_user.categories
-        p '=========='
-        p @categories
-        p '=========='
     end
 
     def show
