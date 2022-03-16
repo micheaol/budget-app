@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe "activities/edit", type: :view do
+RSpec.describe 'activities/edit', type: :view do
   before(:each) do
-    @activity = assign(:activity, Activity.create!())
+    @activity = assign(:activity, Activity.create!)
   end
 
-  it "renders the edit activity form" do
+  it 'renders the edit activity form' do
     render
 
-    assert_select "form[action=?][method=?]", activity_path(@activity), "post" do
+    assert_select 'form[action=?][method=?]', activity_path(@activity), 'post' do
     end
   end
 end
