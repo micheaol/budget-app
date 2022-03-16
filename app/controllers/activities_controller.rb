@@ -23,6 +23,6 @@ class ActivitiesController < ApplicationController
     private
 
     def activity_params
-        params.require(:entity).permit(:name, :amount, category_ids: [])
+        params.require(:activity).permit(:name, :amount, category_ids: [])
       end
 end
