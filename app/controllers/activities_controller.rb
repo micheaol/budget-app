@@ -15,8 +15,11 @@ class ActivitiesController < ApplicationController
 
     if @entity_transaction.save!
       flash[:notice] = 'Transaction created successfully'
-      redirect_to categories_path
+
+    else
+      flash[:alert] = 'Opps! Something went wrong'
     end
+    redirect_to categories_path
   end
 
   private
