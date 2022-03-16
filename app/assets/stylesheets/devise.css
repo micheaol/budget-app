@@ -1,28 +1,28 @@
 .navbar {
-    background-color: #2596be;
-    height: 15vh;
-    width: 100vw;
-    margin-bottom: 5%;
+  background-color: #2596be;
+  height: 15vh;
+  width: 100vw;
+  margin-bottom: 5%;
 }
 
 .login-self {
-    background-color: #2596be;
-    border: none;
-    color: #f0f5f7;
+  background-color: #2596be;
+  border: none;
+  color: #f0f5f7;
 }
 
 .fa {
-    color: #f0f5f7 !important;
+  color: #f0f5f7 !important;
 }
 
 .login-title {
-    color: #f0f5f7 !important;
+  color: #f0f5f7 !important;
 }
 
 .field {
-    width: 100%;
+  width: 100%;
 }
 
 .contain-self {
-    text-align: center;
+  text-align: center;
 }

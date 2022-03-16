@@ -1,47 +1,45 @@
 .image {
-    width: 60px;
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  footer {
-    bottom: 0;
-    width: 80vw;
-    background-color: #5fb523;
-
-  }
-  
-  .buttons {
-    border: 1px solid white;
-    padding: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    color:white !important;
-  }
-
-  ul {
-    list-style-type: none;
-    align-items: center;
-  }
-
-  .card {
-    background-color: rgb(247, 500, 241) !important;
-  }
-
-  .navbar {
-    background-color: #2596be;
-    height: 15vh;
+  width: 60px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
 }
 
-.add-color-btn{
+footer {
+  bottom: 0;
+  width: 80vw;
+  background-color: #5fb523;
+}
+
+.buttons {
+  border: 1px solid white;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  color: white !important;
+}
+
+ul {
+  list-style-type: none;
+  align-items: center;
+}
+
+.card {
+  background-color: rgb(247, 500, 241) !important;
+}
+
+.navbar {
+  background-color: #2596be;
+  height: 15vh;
+}
+
+.add-color-btn {
   background-color: #5fb523;
   padding: 1rem;
   border-radius: 0%;
-  
 }
 
 .input-group {
@@ -54,5 +52,5 @@
   padding: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  color:white;
+  color: white;
 }
