@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
 
     if @new_category.save
       flash[:notice] = 'Category created sucessfully'
-      
+
     else
       flash[:alert] = 'Opps! All the fields must be filled'
     end
