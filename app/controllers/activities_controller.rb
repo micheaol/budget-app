@@ -13,11 +13,11 @@ class ActivitiesController < ApplicationController
     @entity_transaction = Activity.new(activity_params)
     @entity_transaction.author = current_user
 
-    if @entity_transaction.save!
+    if @entity_transaction.save
       flash[:notice] = 'Transaction created successfully'
 
     else
-      flash[:alert] = 'Opps! Something went wrong'
+      flash[:alert] = 'Opps! Something went wrong. All fields must be filled'
     end
     redirect_to categories_path
   end

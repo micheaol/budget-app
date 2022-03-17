@@ -7,8 +7,4 @@ RSpec.describe Category, type: :model do
     subject.name = nil
     expect(subject).to_not be_valid
   end
-  it 'is not valid without an icon' do
-    subject.icon = nil
-    expect(subject).to_not be_valid
-  end
 end

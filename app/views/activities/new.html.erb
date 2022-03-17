@@ -1,6 +1,7 @@
 <div>
         <nav class="navbar">
         <span></span>
+        <%= link_to '', categories_path, class:'fa fa-arrow-left fa-lg' %>
         <span class="login-title">Create new Transaction</span><br>
         <%= button_to "sign out", destroy_user_session_path, class:'login-self', method: :delete %>
     </nav>

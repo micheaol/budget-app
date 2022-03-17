@@ -22,7 +22,7 @@ RSpec.feature 'Transaction page', type: :feature do
 
   scenario 'The page has an add new transaction button' do
     visit category_path(@category)
-    click_link 'ADD A NEW TRANSACTION'
+    click_link 'ADD NEW TRANSACTION'
     expect(page).to have_current_path(new_activity_path)
   end
 end

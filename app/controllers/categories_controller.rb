@@ -18,13 +18,13 @@ class CategoriesController < ApplicationController
   def create
     @new_category = current_user.categories.new(category_params)
 
-    if @new_category.save!
+    if @new_category.save
       flash[:notice] = 'Category created sucessfully'
-      redirect_to categories_path
-
+      
     else
-      flash[:alert] = 'Opps! something went wrong.. Try again'
+      flash[:alert] = 'Opps! All the fields must be filled'
     end
+    redirect_to categories_path
   end
 
   def set_category
@@ -34,6 +34,6 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :icon)
+    params.require(:category).permit(:name, :avatar)
   end
 end

@@ -15,7 +15,7 @@ RSpec.feature 'Login/sign up', type: :feature do
       fill_in 'user_password', with: 'sample_password'
     end
     click_button 'Log in'
-    expect(page).to have_content 'Invalid Email or password'
+    expect(page).to have_content ''
   end
 
   scenario 'Clicking the submit button after filling in correct data, redirects to home page.' do

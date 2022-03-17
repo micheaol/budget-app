@@ -3,7 +3,7 @@
     <li >
       <div class='card d-flex flex-row bd-highlight mb-3'>
         <div class='image p-2 flex-fill bd-highlight'>
-          <%= category.icon %>
+          <%=image_tag category.avatar, width: "100%" if category.avatar.attached? %>
         </div>
         <div class='p-2 flex-fill bd-highlight'>
           <h5><%= category.name.capitalize %>

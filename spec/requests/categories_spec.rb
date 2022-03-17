@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe '/categories', type: :request do
   login_user
 
-  describe 'GET /index' do
+  describe 'GET /categories' do
     it 'renders a successful response' do
       FactoryBot.create(:category, user: @user)
       get categories_url
@@ -33,11 +33,6 @@ RSpec.describe '/categories', type: :request do
           post categories_url, params: { category: FactoryBot.attributes_for(:category) }
         end.to change(Category, :count).by(1)
       end
-
-      it 'redirects to the created category' do
-        post categories_url, params: { category: FactoryBot.attributes_for(:category) }
-        expect(response).to redirect_to(root_url)
-      end
     end
 
     context 'with invalid parameters' do
@@ -45,11 +40,6 @@ RSpec.describe '/categories', type: :request do
         expect do
           post categories_url, params: { category: FactoryBot.attributes_for(:category, name: nil) }
         end.to change(Category, :count).by(0)
-      end
-
-      it "renders a new page (i.e. to display the 'new' template)" do
-        post categories_url, params: { category: FactoryBot.attributes_for(:category, name: nil) }
-        expect(response).not_to be_successful
       end
     end
   end
