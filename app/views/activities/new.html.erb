@@ -1,0 +1,23 @@
+<div>
+        <nav class="navbar">
+        <span></span>
+        <%= link_to '', categories_path, class:'fa fa-arrow-left fa-lg' %>
+        <span class="login-title">Create new Transaction</span><br>
+        <%= button_to "sign out", destroy_user_session_path, class:'login-self', method: :delete %>
+    </nav>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+<div class='container input-group mb-3 contain-self'>
+<%= form_with(model: @activity) do | form|%>
+    <%= form.text_field :name, placeholder: "Name", class: 'form-control mb-1'%>
+    <%= form.text_field :amount, placeholder: "Amount", class: 'form-control mb-1'%>
+
+    <%= form.collection_select :category_ids, current_user.categories.order(:name), :id, :name, {}, { class: "form-control mt-1", multiple: true } %>
+    </div>
+    <footer type="button" class="btn btn-lg btn-block add-color-btn">
+    <%= form.submit 'Create New Transaction',class: 'btn-caty' %>
+    </footer>
+<%end%>
+</div>
+</div>

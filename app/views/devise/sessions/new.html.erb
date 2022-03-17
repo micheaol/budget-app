@@ -1,0 +1,27 @@
+<div class='default-font'>
+     
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class='navbar'>
+      
+        <%= link_to '', root_path, class: "fa fa-arrow-left fa-lg" %>
+      <div>
+        <h2 class="login-title">LOGIN</h2>
+      </div>
+      <div>
+        <%= f.submit "Log in", class:'login-self'%>
+      </div>
+    </div>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class='container input-group mb-3 contain-self'>
+          <div class="field">
+              <%= f.email_field :email, placeholder: "Email", class: 'form-control mb-1'%>
+              <%= f.password_field :password, placeholder: "Password", class: 'form-control mb-1' %>
+          </div>
+          <div class="d-flex">
+            <%= link_to "Forgot password?", new_password_path(resource_name), class: "has-text-grey-lighter" %>
+          </div>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,19 @@
+<div class='default-font'>
+  <%= link_to category_url(category) do %>
+    <li >
+      <div class='card d-flex flex-row bd-highlight mb-3'>
+        <div class='image p-2 flex-fill bd-highlight'>
+          <%=image_tag category.avatar, width: "100%" if category.avatar.attached? %>
+        </div>
+        <div class='p-2 flex-fill bd-highlight'>
+          <h5><%= category.name.capitalize %>
+          <br>
+          <small><%= category.created_at.strftime('%-d %h %Y')%></small>
+        </div>
+          <div class='p-2 flex-fill bd-highlight'>
+            <small class='has-text-weight-semibold'>$<%= category.total_amount %></small>
+          </div>
+      </div>
+    </li>
+  <%  end %>
+</div>

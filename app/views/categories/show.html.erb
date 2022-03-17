@@ -1,0 +1,30 @@
+
+<div class='default-font'>
+  <header class='navbar login-header is-flex is-justify-content-space-between is-align-items-center p-2 mb-2'>
+	  <%= link_to '', categories_path, class:'fa fa-arrow-left fa-lg' %>
+    <h1 class="has-text-white is-size-4">TRANSACTIONS</h1>
+    <span></span>
+  </header>
+  <div class='container'>
+    <div class='d-flex flex-row justify-content-between bd-highlight mb-3'>
+      <p class='p-2 bd-highlight'>Gift credit:</p>
+      <p class='p-2 bd-highlight'>$<%= @category.total_amount %></p>
+    </div>
+    <hr>
+  </div>
+  
+  <ul class='container'>
+  <% if @activities.empty? %>
+    <div class='has-text-centered'>
+      No Transactions for now
+    </div>
+  <% else %>
+    <% @activities.each do |activity| %>
+      <%= render partial: 'activities/index', locals: { activity: activity } %>
+    <% end %>
+  <% end %>
+  </ul>
+</div>
+  <footer type="button" class="btn btn-lg btn-block add-color-btn">
+    <%= link_to 'ADD NEW TRANSACTION', new_activity_path, class: 'buttons has-text-white has-text-weight-medium' %>
+  </footer>
